@@ -1,4 +1,11 @@
 /*codigo de JavaScript*/
+class Usuario{
+    constructor(nombre, apellido, edad){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this. edad = edad;
+    }
+}
 const sabores = [
     {
       nombre: "Dulce de leche",
@@ -139,10 +146,11 @@ const menu = () => {
 };
 const inicio = () => {
     const nombre = prompt("¿Cual es tu nombre?");
-    const Apellido = prompt("¿Cual es tu apellido?");
+    const apellido = prompt("¿Cual es tu apellido?");
     const edad = parseInt( prompt("¿Cual es tu edad?"));
-    if (edad >= 18){
-        alert('Hola ' + nombre + ' ' + Apellido + ' ' + 'Bienvenido a Ihelados');
+    const usuario = new Usuario(nombre,apellido,edad);
+    if (usuario.edad >= 18){
+        alert('Hola ' + usuario.nombre + ' ' + usuario.apellido + ' ' + 'Bienvenido a Ihelados');
         menu();
     }else{
         alert('Debe ser mayor de edad para ingresar');
