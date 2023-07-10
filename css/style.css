@@ -3,3 +3,257 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/*Reseteo de estilos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cuerpo de la pagina*/
+body{
+    background-color: #CFE8EF;
+    font-family: 'Raleway','sans-serif';
+}
+
+/*Encabezado de la pagina*/
+header{
+    background-color: #AED1E6;
+    color: #FFFFFF;
+    height: 7vh;
+    font-size: 0;
+}
+
+/*Titulo de la pagina*/
+.titulo-pagina{
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    width: 20%;
+    display: inline-block;
+    vertical-align: center;
+    padding-left: 16px;
+}
+
+/*Menu de navegacion*/
+.barra-nav{
+    font-size: 0;
+    width: 80%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: center;
+}
+
+/*item de link*/
+.item-enlace-barra{
+    display: inline-block;
+    list-style-type: none;
+}
+
+/*Estilo de los enlaces del menu*/
+.enlace-barra{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    padding: 5px;
+}
+/*Main*/
+main{
+
+    width: 100vw;
+    height: 86vh;
+}
+/*Banner de inicio*/
+#banner{
+    height: 50%;
+    width: 100vw;
+    background-image:url("../images/helados.jpg");
+    background-repeat: no-repeat;
+    background-position-y:90%;
+    background-size:cover;
+    font-family: 'Pacifico', cursive;
+    color: #FFFFFF;
+    
+    text-align: center;
+}
+#banner h2{
+    font-size: 6rem;
+}
+
+
+
+/*Seccion de bienvenida*/
+.intro{
+    
+    background-color: #FFFFFF;
+    height: 20%;
+    text-align: center;
+}
+.intro p{
+    font-size: 1.5rem;
+}
+/*titulos*/
+.titulo{
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #A0C4E2;
+}
+
+
+
+
+
+/*Seccion de info*/
+#info{
+    height: 30%;
+    text-align: center;
+}
+/*item de la lista de contacto*/
+.item-contacto{
+    display: inline-block;
+    list-style-type: none;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    text-align: center;
+   
+}
+
+/*iconos de los items de contacto*/
+.icono-item-contacto{
+    font-size: 2.5rem;
+}
+/*titulo de los items de contacto*/
+.titulo-item-contacto{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #FFFFFF;
+    
+}
+/*texto debajo del item*/
+.item-contacto p{
+    font-size: 1.5rem;
+    
+}
+/*item de redes*/
+.item-redes{
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px;
+}
+
+/*Imagen de los iconos de redes*/
+.logo-redes{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+/*Pie de pagina*/
+footer{
+    height: 7vh;
+    background-color: #AED1E6;
+    text-align: center;
+    
+}
+footer p{
+    font-size: 1.25rem;
+    padding-top: 10px;
+    color: #FFFFFF;
+}
+
+
+
+
+/*Estilos para clases generales entre las paginas*/
+.main-justificado{
+   padding-left: 15%;
+   padding-right: 15%;
+}
+.contenedor-titulo{
+    text-align: center;
+    border-bottom: #FFFFFF 2px solid;
+    width: 100%;
+}
+.contenedor-titulo .titulo{
+    color: #FFFFFF;
+}
+
+/*NOSOTROS*/
+/*Seccion de descripcion*/
+.descripcion{
+    margin-top: 1rem;
+    padding: 2rem;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+}
+
+/*seccion del staff de personas*/
+.contenedor-staff{
+    padding: 1rem;
+    width: 100%;
+    color: #000000;
+    text-align: center;
+   
+    border-radius: 20px;
+}
+
+/*Imagen del trabajador*/
+.imagen-trabajador{
+    display: inline-block;
+    font-size: 7rem;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    border: #FFFFFF 2px solid;
+}
+/*Nombre de cada trabajador h4*/
+.nombre-trabajador{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+/*Puesto de cada trabajador h5*/
+.puesto-trabajador{
+    font-family: 'pacifico', cursive;
+    font-size: 1.5rem;
+    color: #8C8888;
+}
+
+
+
+/*CONTACTO*/
+/*Contenedor del formulario*/
+.contenedor-formulario{
+    margin-top: 1rem;
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #AED1E6;
+    border-radius: 20px;
+}
+
+/*Mensaje del formulario*/
+.mensaje-formulario{
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    color: #FFFFFF;
+    text-align: center;
+}
+/*contenedor de input y texto*/
+.formulario-contacto label{
+    font-size: 1.5rem;
+    font-family: Raleway, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    display: block;
+}
+/*input*/
+.formulario-contacto label input{
+    border-radius: 20px;
+    display:block ;
+}
