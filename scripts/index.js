@@ -164,7 +164,7 @@ const menu = (usuario) => {
                 break;            
             case 4:
                 compra.calcularMonto();
-                console.log(compra.monto);
+                
                 alert("Usted debera Abonar $"+compra.monto+" Muchas Gracias por su compra!");
                 compra.estado=true;
                 break;
@@ -188,7 +188,7 @@ const menu = (usuario) => {
     };
 
     if(compra.estado){
-       console.log(usuario.compras.push(compra)); 
+       usuario.compras.push(compra); 
     }
       
 
