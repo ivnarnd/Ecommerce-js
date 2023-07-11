@@ -17,9 +17,9 @@ class Compra {
 
     }
     
-
+    
     calcularMonto(){
-        this.monto = this.productos.reduce((total,producto)=> total + producto,0);
+         this.monto = this.productos.reduce((total,producto)=> total + producto.precio,0);
     }
 }
 class Producto  {
@@ -114,7 +114,6 @@ const escogerSabores=(cantidad,tipo)=>{
 
 
     let saboresDisp = sabores.filter(sabor => sabor.stock >= gr );
-    console.log(saboresDisp);
     for (let i = 0; i < saboresDisp.length; i++) {
         cartelSabores = cartelSabores +`${i} ${saboresDisp[i].nombre}\n`;    
     }
@@ -138,28 +137,21 @@ const menu = (usuario) => {
     let error = 0;
     
     while ((finalizado === false) && (compra.estado === false)){
+        
         let op = parseInt(prompt
             ("Ihelados🍦\n Por Favor Escoja el tamaño de Su helado: \n 1. 1/4kg $1000\n 2. 1/2kg  $2000\n 3. 1kg $4000\n 4. Pagar \n 5.Cancelar y Salir"));
         switch (op) {
             case 1:
-                producto.tipo = op;
-                producto.precio = 1000;
-                producto.sabores = escogerSabores(3,1);
-                compra.productos.push(producto);
+                
+                compra.productos.push(new Producto(op,escogerSabores(3,1),1000));
                 alert(`Los sabores elegidos fueron: ${producto.sabores.join(',')}`);
                 break;
             case 2: 
-                producto.tipo = op;
-                producto.precio = 2000;
-                producto.sabores = escogerSabores(3,2);
-                compra.productos.push(producto);
+                compra.productos.push(new Producto(op,escogerSabores(3,2),2000));
                 alert(`Los sabores elegidos fueron: ${producto.sabores.join(',')}`);
                 break;
             case 3: 
-                producto.tipo = op;
-                producto.precio = 4000;
-                producto.sabores = escogerSabores(3,3);
-                compra.productos.push(producto);
+                compra.productos.push(new Producto(op,escogerSabores(3,3),4000));
                 alert(`Los sabores elegidos fueron: ${producto.sabores.join(',')}`);
                 break;            
             case 4:
@@ -195,8 +187,7 @@ const menu = (usuario) => {
 
 };
 const inicio = () => {
-    
-    const nombre = prompt("¿Cual es tu nombre?");
+     const nombre = prompt("¿Cual es tu nombre?");
     const apellido = prompt("¿Cual es tu apellido?");
     const edad = parseInt( prompt("¿Cual es tu edad?"));
     let favoritos = [];
