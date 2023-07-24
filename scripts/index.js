@@ -194,9 +194,11 @@ const iniciar = (e) => {
     const apellido = e.target.children[3].value;
     const fechaNac = new Date(e.target.children[5].value);
     const edad = Math.floor((fechaActual - fechaNac) / (1000 * 60 * 60 * 24 * 365.25));
-    console.log(edad);
+
     if (edad >= 18) {
         let usuario = new Usuario(nombre,apellido,edad,[],[]);
+        window.location.href='./pages/tienda.html';
+
         
     } else {
         alert("Eres menor de edad. Debes tener al menos 18 años para acceder.");
