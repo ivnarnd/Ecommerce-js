@@ -1,0 +1,8 @@
+ /*CONTENEDOR DE ELEMENTOS DE BUSQUEDA*/
+ .cabecera-busqueda{
+    width: 100%;
+    height: 15%;
+    @include flexbox(flex,column,nowrap,center,center);
+}
+@import './barra-busqueda';
+@import './select-cant';
