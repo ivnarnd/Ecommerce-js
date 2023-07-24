@@ -186,19 +186,21 @@ const menu = (usuario) => {
 
 
 };
-const inicio = () => {
-     const nombre = prompt("¿Cual es tu nombre?");
-    const apellido = prompt("¿Cual es tu apellido?");
-    const edad = parseInt( prompt("¿Cual es tu edad?"));
-    let favoritos = [];
-    let compras = [];
-    let usuario = new Usuario(nombre,apellido,edad,compras,favoritos);
-    if (usuario.edad >= 18){
-         alert('Hola ' + usuario.nombre + ' ' + usuario.apellido + ' ' + 'Bienvenido a Ihelados');
-        menu(usuario);
-    }else{
-        alert('Debe ser mayor de edad para ingresar');
+
+const iniciar = (e) => {
+    e.preventDefault();
+    let fechaActual = new Date();
+    const nombre = e.target.children[1].value;
+    const apellido = e.target.children[3].value;
+    const fechaNac = new Date(e.target.children[5].value);
+    const edad = Math.floor((fechaActual - fechaNac) / (1000 * 60 * 60 * 24 * 365.25));
+    console.log(edad);
+    if (edad >= 18) {
+        let usuario = new Usuario(nombre,apellido,edad,[],[]);
+        
+    } else {
+        alert("Eres menor de edad. Debes tener al menos 18 años para acceder.");
     }
 };
-
-inicio();
+let form = document.getElementById('formulario_inicio');
+form.addEventListener('submit',iniciar);
