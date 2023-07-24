@@ -12,7 +12,7 @@ const iniciar = (e) => {
     
     if (edad >= 18) {
         const usuarioenLS=JSON.parse(localStorage.getItem('usuario'));
-        if(usuarioenLS.nombre == nombre && usuarioenLS.apellido == apellido){
+        if(usuarioenLS && (usuarioenLS.nombre == nombre && usuarioenLS.apellido == apellido)){
             usuario = usuarioenLS;
             window.location.href='./pages/tienda.html';
         }else{
