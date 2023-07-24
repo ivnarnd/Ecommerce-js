@@ -1,0 +1,25 @@
+
+body{
+    
+    background-color: $body-color;
+    font-family: $font-text;
+    display:grid;
+    grid-template-rows: 7vh 86vh 7vh;
+    grid-template-columns: 7.5vw 85vw 7.5vw;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer"
+    ;
+}
+.body-ajustable{
+    @extend body;
+    grid-template-areas: "header header header"
+    ". main ."
+    "footer footer footer"
+    ;
+}
+.body-paginas{
+    @extend .body-ajustable;
+    grid-template-rows: auto auto auto;
+}

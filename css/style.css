@@ -1,29 +1,151 @@
+/*Colores de la pagina*/
+/*font-size*/
+/*fuente de la pagina*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-body {
+body, .body-ajustable, .body-paginas {
+  background-color: #cfe8ef;
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-rows: 7vh 86vh 7vh;
+  grid-template-columns: 7.5vw 85vw 7.5vw;
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
 
-  background-color: #CFE8EF;
-  
-}
-main{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main form{
+.body-ajustable, .body-paginas {
+  grid-template-areas: "header header header" ". main ." "footer footer footer"; }
+
+.body-paginas {
+  grid-template-rows: auto auto auto; }
+
+nav {
+  grid-area: header;
+  background-color: #aed1e6;
   color: white;
-  padding: 1rem;
-  border-radius: 25px;
-  background-color: #3393ae;
-  width: 30%;
-  height:50%;
+  padding-bottom: 0;
+  margin: 0; }
+  nav .navbar-toggler {
+    border: none; }
+  nav .titulo-pagina {
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+    color: white; }
+
+/*enlaces del menu*/
+.nav-item .nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  padding: 5px; }
+  .nav-item .nav-link.active {
+    color: #85c7de;
+    font-weight: 400px; }
+
+.nav-item:hover {
+  transform: scale(1.1, 1); }
+
+.offcanvas {
+  background-color: #aed1e6; }
+
+main, .main-ajustable {
+  grid-area: main;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center; }
+
+.main-ajustable {
+  height: 100%; }
+
+footer {
+  grid-area: footer;
+  background-color: #aed1e6;
+  text-align: center;
+  padding: 5px; }
+  footer p {
+    font-size: 1.20rem;
+    color: white; }
+
+/*CONTENEDOR DE TIENDA*/
+.contenedor-tienda {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; }
+
+/*CONTENEDOR DE SECCION FAVORITOS*/
+.tienda-seccion {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center; }
+  .tienda-seccion .contenedor-sabores-tienda {
+    border-radius: 25px;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; }
+  .tienda-seccion .sub-titulo {
+    font-family: "Pacifico", cursive;
+    font-size: 2.25rem;
+    color: white; }
+
+.sabor-item {
+  margin-top: 1rem;
+  background-color: #aed1e6;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
+  width: 32%;
+  height: 400px; }
+  .sabor-item .sabor-item-img {
+    width: 90%;
+    height: 60%;
+    border-radius: 25px; }
+  .sabor-item .sabor-item-detalle {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; }
+    .sabor-item .sabor-item-detalle h4 {
+      color: white;
+      font-family: "Raleway", sans-serif; }
+  .sabor-item:hover {
+    transform: scale(1.1, 1);
+    margin: 0.5rem;
+    border: 5px solid #85c7de; }
+
+.detalle-btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: space-between;
-}
+  align-items: center; }
+  .detalle-btns .boton-sabores {
+    border: none;
+    border-radius: 25px;
+    color: #85c7de;
+    width: 40%;
+    background-color: white; }
+    .detalle-btns .boton-sabores:hover {
+      transform: scale(1.1, 1);
+      margin: 0.5rem;
+      border: 5px solid #85c7de; }

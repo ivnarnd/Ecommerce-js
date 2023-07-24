@@ -1,0 +1,12 @@
+
+footer{
+    grid-area: footer;
+    background-color: $component-color;
+    text-align: center;
+    padding: 5px;
+   
+     p{
+        font-size: 1.20rem;
+        color: $text-white-color;
+    }
+}

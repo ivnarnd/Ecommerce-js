@@ -1,0 +1,12 @@
+@import '../components/barra-filtros';
+
+ /*CONTENEDOR DE TIENDA*/
+ .contenedor-tienda{
+
+    width: 100%;
+    @include flexbox(flex,column,nowrap,center,center);
+ }
+
+@import '../components/contenedor-favoritos';
+
+ 

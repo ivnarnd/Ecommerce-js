@@ -1,0 +1,42 @@
+nav{
+    grid-area: header;
+    background-color: $component-color;
+    color: $text-white-color;
+    padding-bottom: 0;
+    margin: 0;
+
+    .navbar-toggler{
+        border: none;
+    }
+    .titulo-pagina{
+        font-family: $font-title;
+        font-size: 1.5rem;
+        color: $text-white-color;
+    }
+}
+
+
+
+
+/*enlaces del menu*/
+.nav-item{
+    .nav-link{
+        text-decoration: none;
+        color: $text-white-color;
+        font-size: 1.25rem;
+        padding: 5px;
+        &.active{
+            color: $elements-color;
+            font-weight: 400px;
+        }
+    }
+    &:hover{
+        transform: scale(1.1,1);
+    }
+   
+}
+
+.offcanvas{
+    background-color: $component-color;
+    
+}

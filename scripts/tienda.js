@@ -1,7 +1,5 @@
 let sabores = JSON.parse(localStorage.getItem('Sabores'));
 let contenedorSabores=document.getElementById('contenedor-sabores');
-console.log(contenedorSabores);
-
 for (const sabor of sabores) {
     let contenedor = document.createElement('div');
     contenedor.classList.add('sabor-item');
