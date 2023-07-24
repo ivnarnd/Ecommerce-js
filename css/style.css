@@ -4,4 +4,26 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #CFE8EF; }
+
+  background-color: #CFE8EF;
+  
+}
+main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main form{
+  color: white;
+  padding: 1rem;
+  border-radius: 25px;
+  background-color: #3393ae;
+  width: 30%;
+  height:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
