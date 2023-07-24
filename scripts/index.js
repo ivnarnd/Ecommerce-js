@@ -197,7 +197,9 @@ const iniciar = (e) => {
 
     if (edad >= 18) {
         let usuario = new Usuario(nombre,apellido,edad,[],[]);
+        localStorage.setItem('usuario',JSON.stringify(usuario));
         window.location.href='./pages/tienda.html';
+        
 
         
     } else {
