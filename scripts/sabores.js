@@ -12,7 +12,7 @@ export const sabores = [
      {
       nombre: "Chocolate amargo",
       descripcion: "Para los amantes del chocolate intenso, este helado ofrece una experiencia rica y profunda, con un sabor a cacao puro que deleitará a los paladares más exigentes.",
-      stock: 5000
+      stock: 450
       },
     {
       nombre: "Menta granizada",

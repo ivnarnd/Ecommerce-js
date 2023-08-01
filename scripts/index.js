@@ -16,7 +16,7 @@ const iniciar = (e) => {
             usuario = usuarioenLS;
             window.location.href='./pages/tienda.html';
         }else{
-            usuario = new Usuario(nombre,apellido,edad,[],[]);
+            usuario = new Usuario(nombre,apellido,edad,[],[],[]);
             localStorage.setItem('usuario',JSON.stringify(usuario));
             window.location.href='./pages/tienda.html';
         }

@@ -1,24 +1,40 @@
 let sabores = JSON.parse(localStorage.getItem('Sabores'));
 let usuario = JSON.parse(localStorage.getItem('usuario'));
-let saboresDisp = sabores.filter((sab)=> sab.stock>=250);
-let {nombre,apellido,edad,compras,favoritos} = usuario;
+let {nombre,apellido,edad,compras,favoritos,carrito} = usuario;
+console.log(typeof(sabores[0].stock));
+let  filtroGr = document.getElementsByClassName('btn-radio');
 
 let contenedorSabores=document.getElementById('contenedor-sabores');
-for (const sabor of saboresDisp) {
-    let contenedor = document.createElement('div');
-    contenedor.classList.add('sabor-item');
-    contenedor.innerHTML=
-    `<img class="sabor-item-img" src="../images/helado-frutilla.jpg" alt="Helado de ${sabor.nombre}">
-    <section class="sabor-item-detalle">
-        <h4>${sabor.nombre}</h4>
-        <section class="detalle-btns">
-            <button class="boton-sabores" alt="boton de añadir a cesta">✚</button>
-            <button class="boton-sabores" alt="boton de añadir a favoritos">★</button>
-        </section>
-    </section>`
-    contenedorSabores.append(contenedor);
-    
+function desplegarItemsSabores(e){
+    while (contenedorSabores.firstChild) {
+        console.log('se ejecuto el borrado');
+        contenedorSabores.firstChild.remove();
+    }
+    let gr = Number(e.target.value);
+    console.log(typeof(gr));
+    let saboresDisp = sabores.filter((sab)=> sab.stock >= gr);
+    for (const sabor of saboresDisp) {
+        let contenedor = document.createElement('div');
+        contenedor.classList.add('sabor-item');
+        contenedor.innerHTML=
+        `<img class="sabor-item-img" src="../images/helado-frutilla.jpg" alt="Helado de ${sabor.nombre}">
+        <section class="sabor-item-detalle">
+            <h4>${sabor.nombre}</h4>
+            <section class="detalle-btns">
+                <button class="boton-sabores" alt="boton de añadir a cesta">✚</button>
+                <button class="boton-sabores" alt="boton de añadir a favoritos">★</button>
+            </section>
+        </section>`
+        contenedorSabores.append(contenedor);
+        
+    }
 }
+for (const filtro of filtroGr) {
+    
+    filtro.addEventListener('click',desplegarItemsSabores);
+}
+
+
 
 
 // const escogerSabores=(cantidad,tipo)=>{
