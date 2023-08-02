@@ -1,4 +1,3 @@
-/*codigo de JavaScript*/
 import { sabores } from "./sabores.js";
 import{Usuario}from './clases/usuario.js';
 const iniciar = (e) => {
@@ -11,15 +10,14 @@ const iniciar = (e) => {
     let usuario;
     
     if (edad >= 18) {
-        const usuarioenLS=JSON.parse(localStorage.getItem('usuario'));
+        const usuarioenLS = JSON.parse(localStorage.getItem('usuario'));
         if(usuarioenLS && (usuarioenLS.nombre == nombre && usuarioenLS.apellido == apellido)){
             usuario = usuarioenLS;
-            window.location.href='./pages/tienda.html';
         }else{
-            usuario = new Usuario(nombre,apellido,edad,[],[],[]);
+            usuario = new Usuario(nombre,apellido,edad);
             localStorage.setItem('usuario',JSON.stringify(usuario));
-            window.location.href='./pages/tienda.html';
         }
+        window.location.href='./pages/tienda.html';
      } else {
         alert("Eres menor de edad. Debes tener al menos 18 años para acceder.");
     }

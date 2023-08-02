@@ -1,17 +1,16 @@
+/*Variables de la tienda*/
 let sabores = JSON.parse(localStorage.getItem('Sabores'));
 let usuario = JSON.parse(localStorage.getItem('usuario'));
-let {nombre,apellido,edad,compras,favoritos,carrito} = usuario;
-console.log(typeof(sabores[0].stock));
-let  filtroGr = document.getElementsByClassName('btn-radio');
-
+let filtroGr = document.getElementsByClassName('btn-radio');
 let contenedorSabores=document.getElementById('contenedor-sabores');
+
+
+
 function desplegarItemsSabores(e){
     while (contenedorSabores.firstChild) {
-        console.log('se ejecuto el borrado');
         contenedorSabores.firstChild.remove();
     }
     let gr = Number(e.target.value);
-    console.log(typeof(gr));
     let saboresDisp = sabores.filter((sab)=> sab.stock >= gr);
     for (const sabor of saboresDisp) {
         let contenedor = document.createElement('div');
@@ -30,7 +29,6 @@ function desplegarItemsSabores(e){
     }
 }
 for (const filtro of filtroGr) {
-    
     filtro.addEventListener('click',desplegarItemsSabores);
 }
 
