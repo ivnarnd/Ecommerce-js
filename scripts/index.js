@@ -1,4 +1,4 @@
-import { sabores } from "./sabores.js";
+import { sabores } from "./sabores.json";
 import{Usuario}from './clases/usuario.js';
 const iniciar = (e) => {
     e.preventDefault();

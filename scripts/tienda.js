@@ -1,17 +1,21 @@
+import { Producto } from "./clases/producto.js";
 /*Variables de la tienda*/
 let sabores = JSON.parse(localStorage.getItem('Sabores'));
 let usuario = JSON.parse(localStorage.getItem('usuario'));
 let filtroGr = document.getElementsByClassName('btn-radio');
 let contenedorSabores=document.getElementById('contenedor-sabores');
 
-
+let agregarSab = (padre)=>{
+    console.log(padre);
+}
 
 function desplegarItemsSabores(e){
+    let productoAct = new Producto(Number(e.target.value),[]);
+    console.log(productoAct);
     while (contenedorSabores.firstChild) {
         contenedorSabores.firstChild.remove();
     }
-    let gr = Number(e.target.value);
-    let saboresDisp = sabores.filter((sab)=> sab.stock >= gr);
+    let saboresDisp = sabores.filter((sab)=> sab.stock >= productoAct.tipo);
     for (const sabor of saboresDisp) {
         let contenedor = document.createElement('div');
         contenedor.classList.add('sabor-item');
@@ -20,18 +24,18 @@ function desplegarItemsSabores(e){
         <section class="sabor-item-detalle">
             <h4>${sabor.nombre}</h4>
             <section class="detalle-btns">
-                <button class="boton-sabores" alt="boton de añadir a cesta">✚</button>
-                <button class="boton-sabores" alt="boton de añadir a favoritos">★</button>
+                <button class="boton-sabores add" id='${sabor.id}' alt="boton de añadir a cesta">✚</button>
+                <button class="boton-sabores fav" id='${sabor.nombre}' alt="boton de añadir a favoritos">★</button>
             </section>
-        </section>`
-        contenedorSabores.append(contenedor);
-        
+        </section>`;
+        contenedorSabores.append(contenedor);    
     }
+
 }
 for (const filtro of filtroGr) {
     filtro.addEventListener('click',desplegarItemsSabores);
 }
-
+ 
 
 
 

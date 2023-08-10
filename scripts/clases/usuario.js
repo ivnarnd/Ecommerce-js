@@ -1,5 +1,3 @@
-import { Producto } from "./producto.js";
-
 export class Usuario{
     constructor(nombre, apellido, edad){
         this.nombre = nombre;

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nombre": "Fresa y Crema",
+    "descripcion": "Una combinación dulce y cremosa de fresa y crema, perfecta para los amantes de los sabores clásicos.",
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "nombre": "Mango Tango",
+    "descripcion": "Una explosión tropical de sabor a mango fresco, ideal para refrescarse en días calurosos.",
+    "stock": 12
+  },
+  {
+    "id": 3,
+    "nombre": "Chocolate Blanco y Frambuesa",
+    "descripcion": "Una mezcla indulgente de chocolate blanco con toques de frambuesa ácida para un equilibrio perfecto.",
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "nombre": "Coco Exótico",
+    "descripcion": "Un delicioso sabor a coco que te transportará a una playa paradisíaca en cada mordisco.",
+    "stock": 8
+  },
+  {
+    "id": 5,
+    "nombre": "Menta Refrescante",
+    "descripcion": "Un clásico refrescante de menta que deja un sabor fresco y limpio en tu boca.",
+    "stock": 20
+  },
+  {
+    "id": 6,
+    "nombre": "Vainilla Bourbon",
+    "descripcion": "Un sabor de vainilla rica y suave con notas sutiles de bourbon para los paladares más sofisticados.",
+    "stock": 18
+  },
+  {
+    "id": 7,
+    "nombre": "Arándanos Silvestres",
+    "descripcion": "Una combinación jugosa y agridulce de arándanos silvestres que despierta los sentidos.",
+    "stock": 14
+  },
+  {
+    "id": 8,
+    "nombre": "Caramelo Salado",
+    "descripcion": "Una mezcla indulgente de caramelo dulce y sal marina que ofrece una experiencia de sabor única.",
+    "stock": 16
+  },
+  {
+    "id": 9,
+    "nombre": "Café Espresso",
+    "descripcion": "Un placer para los amantes del café, con un fuerte sabor a espresso en cada bocado.",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "nombre": "Almendra Tostada",
+    "descripcion": "Una mezcla crujiente de almendras tostadas y helado, perfecta para aquellos que disfrutan de texturas contrastantes.",
+    "stock": 12
+  }
+]
