@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nombre": "Fresa y Crema",
+        "descripcion": "Una mezcla suave de crema y trozos de fresa.",
+        "precio": 2500,
+        "stock": 50,
+        "tipo": "crema",
+        "img": "../images/helado-fresa.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Vainilla",
+        "descripcion": "El clásico sabor a vainilla cremosa y suave.",
+        "precio": 2200,
+        "stock": 40,
+        "tipo": "crema",
+        "img": "../images/helado-vainilla.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Chocolate",
+        "descripcion": "Rico helado de chocolate cremoso y delicioso.",
+        "precio": 2300,
+        "stock": 35,
+        "tipo": "crema",
+        "img": "../images/helado-chocolate.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Caramelo Salado",
+        "descripcion": "Helado de crema con caramelo y toques de sal.",
+        "precio": 2700,
+        "stock": 25,
+        "tipo": "crema",
+        "img": "../images/helado-caramelo.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Café",
+        "descripcion": "Helado de crema con sabor a café, perfecto para los amantes del café.",
+        "precio": 2900,
+        "stock": 30,
+        "tipo": "crema",
+        "img": "../images/helado-cafe.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Limón",
+        "descripcion": "Refrescante paleta de agua con sabor a limón.",
+        "precio": 2100,
+        "stock": 60,
+        "tipo": "agua",
+        "img": "../images/helado-limon.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "Sandía",
+        "descripcion": "Una opción jugosa y dulce para los días calurosos.",
+        "precio": 2400,
+        "stock": 55,
+        "tipo": "agua",
+        "img": "../images/helado-sandia.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Mango",
+        "descripcion": "Paleta tropical de agua con sabor a mango maduro.",
+        "precio": 2600,
+        "stock": 45,
+        "tipo": "agua",
+        "img": "../images/helado-mango.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Piña Colada",
+        "descripcion": "Una mezcla de piña y coco que te transportará a la playa.",
+        "precio": 2800,
+        "stock": 50,
+        "tipo": "agua",
+        "img": "../images/helado-pina.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Kiwi-Fresa",
+        "descripcion": "Combinación fresca de kiwi y fresa para un sabor único.",
+        "precio": 2300,
+        "stock": 40,
+        "tipo": "agua",
+        "img": "../images/helado-kiwi.jpg"
+    }
+]
