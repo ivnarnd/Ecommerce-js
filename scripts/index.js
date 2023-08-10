@@ -1,4 +1,4 @@
-import { sabores } from "./sabores.json";
+import { sabores } from "./sabores.js";
 import{Usuario}from './clases/usuario.js';
 const iniciar = (e) => {
     e.preventDefault();
@@ -19,7 +19,11 @@ const iniciar = (e) => {
         }
         window.location.href='./pages/tienda.html';
      } else {
-        alert("Eres menor de edad. Debes tener al menos 18 años para acceder.");
+        Swal.fire({
+                 text: "Eres menor de edad. Debes tener al menos 18 años para acceder.",
+                 icon: 'warning'
+             })
+        
     }
 };
 

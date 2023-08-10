@@ -1,4 +1,4 @@
-[
+export let sabores =[
   {
     "id": 1,
     "nombre": "Fresa y Crema",
