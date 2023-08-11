@@ -1,4 +1,4 @@
-import { sabores } from "./sabores.js";
+
 import{Usuario}from './clases/usuario.js';
 const iniciar = (e) => {
     e.preventDefault();
@@ -27,10 +27,7 @@ const iniciar = (e) => {
     }
 };
 
-const saboresEnLS=JSON.parse(localStorage.getItem('Sabores'));
-if(saboresEnLS != true){
-    localStorage.setItem('Sabores',JSON.stringify(sabores));
-}
+
 
 let form = document.getElementById('formulario_inicio');
 form.addEventListener('submit',iniciar);
