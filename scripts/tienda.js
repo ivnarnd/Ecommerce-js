@@ -11,6 +11,8 @@
                     <div class="card-body">
                       <h5 class="card-title">${producto.nombre}</h5>
                       <p class="card-text">${producto.descripcion}</p>
+                      <p class="card-text">Precio: $${producto.precio}</p>
+                      <button type="button" class="btn btn-outline-info" data-index=${producto.id}>Agregar a carrito</button>
                     </div>
                   </div>`
                 ;
